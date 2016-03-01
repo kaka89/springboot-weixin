@@ -19,6 +19,7 @@
 	</properties>
 	<modules>
 		<module>common</module>
+		<module>config-service</module>
 		<module>weixin-service</module>
 		<!-- <module>config-service</module> <module>dashboard-service</module> 
 			<module>auth-service</module> <module>user-service</module> -->
@@ -146,6 +147,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 			<version>1.0.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.netflix.hystrix</groupId>

@@ -6,25 +6,30 @@ package com.umasuo.weixin.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.swagger.annotations.ApiOperation;
-
+import com.umasuo.weixin.TestConfig;
 import com.umasuo.weixin.routes.WeiXinRouting;
 
+@RefreshScope
 @RestController
 public class TestController {
     private static Logger logger = LoggerFactory.getLogger(TestController.class);
 
-    @ApiOperation(value = "Get Sony's AGps files")
+    @Autowired
+    private TestConfig config;
+    
     @RequestMapping(value = WeiXinRouting.TEST, method = RequestMethod.GET)
     @ResponseBody
-    public String list(@RequestParam String id, @RequestParam String name) throws Exception {
-        logger.info("we got id:" + id + " name:" + name);
-        return id + " got name:" + name;
+    public String test(@RequestParam String id, @RequestParam String name) throws Exception {
+        String msg = id + " got name:" + name + " message" + config.getMessage();
+        logger.info(msg);
+        return msg;
     }
 }
