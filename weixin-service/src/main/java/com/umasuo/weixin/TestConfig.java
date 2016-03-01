@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2015-2016 Umasuo, Inc. All Rights Reserved.
+ */
+
 package com.umasuo.weixin;
 
 import org.springframework.beans.factory.annotation.Value;

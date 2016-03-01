@@ -24,7 +24,7 @@ public class TestController {
 
     @Autowired
     private TestConfig config;
-    
+
     @RequestMapping(value = WeiXinRouting.TEST, method = RequestMethod.GET)
     @ResponseBody
     public String test(@RequestParam String id, @RequestParam String name) throws Exception {
