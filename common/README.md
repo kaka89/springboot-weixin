@@ -1,0 +1,1 @@
+Common logic to be shared across services.
