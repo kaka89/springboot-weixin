@@ -4,6 +4,9 @@
 
 package com.umasuo.weixin.routes;
 
+/**
+ * weixin routes
+ */
 public class WeiXinRouting {
 
     public static final String SERVICE_NAME = "weixin-service";
