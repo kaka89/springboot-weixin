@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.umasuo.service.weixin.routes.WeiXinRoutes;
 import com.umasuo.weixin.TestConfig;
-import com.umasuo.weixin.routes.WeiXinRouting;
 
 @RefreshScope
 @RestController
@@ -25,7 +25,7 @@ public class TestController {
     @Autowired
     private TestConfig config;
 
-    @RequestMapping(value = WeiXinRouting.TEST, method = RequestMethod.GET)
+    @RequestMapping(value = WeiXinRoutes.TEST, method = RequestMethod.GET)
     @ResponseBody
     public String test(@RequestParam String id, @RequestParam String name) throws Exception {
         String msg = id + " got name:" + name + " message" + config.getMessage();

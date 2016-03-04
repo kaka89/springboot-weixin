@@ -38,6 +38,7 @@ public class Application {
     }
 
 }
+
 @RestController
 class ServiceInstanceRestController {
 

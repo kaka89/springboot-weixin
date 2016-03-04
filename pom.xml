@@ -21,7 +21,8 @@
 		<module>common</module>
 		<module>config-service</module>
 		<module>weixin-service</module>
-		<!-- <module>config-service</module> <module>dashboard-service</module> 
+		<!-- <module>config-service</module> -->
+		<!-- <module>dashboard-service</module> 
 			<module>auth-service</module> <module>user-service</module> -->
 	</modules>
 	<reporting>
