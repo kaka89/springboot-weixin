@@ -40,17 +40,6 @@ public class LogFilter implements Filter {
      * @param authFilter
      * @return
      */
-//    @Bean
-//    public FilterRegistrationBean filterRegistrationBean(
-//            LogFilter filter) {
-//        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-//        filterRegistrationBean.setName("filter0");
-//        filterRegistrationBean.setFilter(filter);
-//        filterRegistrationBean.setOrder(0);
-//        filterRegistrationBean.setEnabled(true);
-//        filterRegistrationBean.addUrlPatterns("/*");
-//        return filterRegistrationBean;
-//    }
 
     @Override
     public void init(FilterConfig arg0) throws ServletException {
