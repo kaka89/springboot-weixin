@@ -1,3 +1,3 @@
-# SpringCloud-weixin
-This project is build with springboot, and all this is for WeChat Official Account service
+# SpringCloud-WeChat
+This project is build with springboot, and the main purpose of this project is to give a easy way to build service for wechat
 
