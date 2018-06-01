@@ -1,0 +1,7 @@
+server:
+  port: 8088
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'

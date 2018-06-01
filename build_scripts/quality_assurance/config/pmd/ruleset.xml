@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<ruleset name="Go6d PMD Ruleset" xmlns="http://pmd.sf.net/ruleset/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+  xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>ReactiveSW PMD Ruleset</description>
+
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/basic.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/braces.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/clone.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/comments.xml">
+    <!--content size should not be limited -->
+    <exclude name="CommentSize" />
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/controversial.xml">
+    <!-- sometimes conflict with rule of UnnecessaryConstructor -->
+    <exclude name="AtLeastOneConstructor" />
+    <exclude name="DataflowAnomalyAnalysis" />
+    <!-- conflict with LocalVariableCouldBeFinal -->
+    <exclude name="AvoidFinalLocalVariable" />
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/coupling.xml">
+    <!-- to suppress warnings -->
+    <exclude name="LoosePackageCoupling" />
+    <exclude name="LawOfDemeter" />
+    <exclude name="ExcessiveImports"/>
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/design.xml">
+    <exclude name="PreserveStackTrace" />
+    <exclude name="ImmutableField" />
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/empty.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/finalizers.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/imports.xml">
+    <exclude name="TooManyStaticImports"/>
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/j2ee.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/javabeans.xml">
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/junit.xml"></rule>
+  <rule
+    ref="build_scripts/quality_assurance/config/pmd/rulesets/logging-jakarta-commons.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/logging-java.xml">
+    <exclude name="InvalidSlf4jMessageFormat" />
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/migrating.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/naming.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/optimizations.xml">
+    <!-- too many final -->
+    <exclude name="MethodArgumentCouldBeFinal"></exclude>
+    <!-- too many final -->
+    <exclude name="LocalVariableCouldBeFinal"></exclude>
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/strictexception.xml">
+    <!-- some generated code throws exception and we need to extends them -->
+    <exclude name="SignatureDeclareThrowsException" />
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/strings.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/sunsecure.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/typeresolution.xml">
+    <!-- some generated code throws exception and we need to extends them -->
+    <exclude name="SignatureDeclareThrowsException" />
+  </rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/unnecessary.xml"></rule>
+  <rule ref="build_scripts/quality_assurance/config/pmd/rulesets/unusedcode.xml"></rule>
+</ruleset>

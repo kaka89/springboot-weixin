@@ -1,0 +1,21 @@
+// This should be the first `apply from` file.
+repositories {
+    jcenter()
+    mavenCentral()
+    // For spring config `M1`
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+}
+
+apply plugin: 'java'
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+// Specify the gradle wrapper version
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}

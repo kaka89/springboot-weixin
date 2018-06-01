@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+
+evacloud:
+  auth:
+    enable: true
+    key: evacloud
+    expire: 86400
+
+# 把不同环境使用的一些配置，放到对应环境的配置文件中，默认使用dev环境配置
+spring:
+  profiles:
+    active: dev

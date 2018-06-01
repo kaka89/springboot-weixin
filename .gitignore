@@ -1,3 +1,30 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+*.jar
+*.war
+*.ear
+
+# Logs and databases #
+######################
+*.log
 
 # OS generated files #
 ######################
@@ -11,7 +38,23 @@ Thumbs.db
 *~
 *.swp
 
-IntelliJ specific files/directories
+# Gradle Files #
+################
+.gradle
+.m2
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Build output directies
+/target
+*/target
+/build
+*/build
+/bin
+*/bin
+classes
+
+# IntelliJ specific files/directories
 out
 .idea
 *.ipr
@@ -38,3 +81,4 @@ hs_err_pid*
 */gradle
 /gradle
 gradlew*
+

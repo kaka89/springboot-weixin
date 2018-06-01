@@ -1,0 +1,37 @@
+buildscript {
+    ext {
+        // specify the spring boot gradle plugin version
+        springBootVersion = '1.5.2.RELEASE'
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        // for spring boot
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        //for docker build
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+        // for unit test code coverage  -- need to find a way to put it in its file
+        classpath('com.palantir:jacoco-coverage:0.4.0')
+
+    }
+}
+
+apply from: 'build_scripts/build_setups.gradle'
+
+apply from: 'build_scripts/application_version.gradle'
+
+apply from: 'build_scripts/application_dependencies.gradle'
+
+apply from: 'build_scripts/docker_build.gradle'
+
+//for code quality assurance
+//apply from: 'build_scripts/quality_assurance/checkstyle.gradle'
+//apply from: 'build_scripts/quality_assurance/findbugs.gradle'
+//apply from: 'build_scripts/quality_assurance/pmd.gradle'
+//apply from: 'build_scripts/quality_assurance/test_coverage.gradle'
+

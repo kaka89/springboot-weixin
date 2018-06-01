@@ -1,0 +1,4 @@
+jar {
+    baseName = 'springboot-wechat'
+    version = '1.0'
+}

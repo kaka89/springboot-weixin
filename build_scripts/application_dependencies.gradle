@@ -1,0 +1,57 @@
+// Declare application repositories and dependencies
+// Auto manage all spring boot dependencies
+apply plugin: 'org.springframework.boot'
+
+// For unit test
+apply plugin: 'groovy'
+
+dependencies {
+    // Spring
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    // 缓存
+    compile("org.springframework.boot:spring-boot-starter-data-redis")
+
+    // Spring data jpa
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+
+    // mysql driver
+    compile('mysql:mysql-connector-java')
+
+    // For @CreatedDate and @LastModifiedDate
+    compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.5')
+
+    // Common tool like: StringUtils
+    compile('org.apache.commons:commons-lang3:3.4')
+
+    compile('org.eclipse.persistence:org.eclipse.persistence.moxy:2.5.2-M1')
+
+    // Collection tool like: CollectionUtils
+    compile('org.apache.commons:commons-collections4:4.1')
+
+    compile('com.auth0:java-jwt:3.3.0')
+
+    // Lombok
+    compile('org.projectlombok:lombok:1.16.12')
+
+    // For google collect lib
+    compile('com.google.guava:guava:21.0')
+
+    // For kaptcha
+    compile('com.github.penggle:kaptcha:2.3.2')
+
+    //spring boot test
+    testCompile('org.springframework.boot:spring-boot-starter-test:1.4.0.RELEASE')
+
+    //groovy for spock
+    testCompile('org.codehaus.groovy:groovy-all:2.4.1')
+
+    //spock core
+    testCompile('org.spockframework:spock-core:1.0-groovy-2.4')
+
+    //spock spring
+    testCompile('org.spockframework:spock-spring:1.0-groovy-2.4')
+
+    // for mock non interface
+    testCompile('cglib:cglib-nodep:3.2.5')
+}

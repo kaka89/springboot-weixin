@@ -1,0 +1,30 @@
+apply plugin: 'findbugs'
+
+/*************find bug***************/
+tasks.withType(FindBugs) {
+    //exclude the package you do not want to check
+    // findBugs doesn't work if the filter is empty. Comment all if nothing to exclude
+    classes = classes.filter {
+        !it.path.contains('/**/util/**/')
+    }
+}
+
+/*************find bug***************/
+
+findbugs {
+    toolVersion = "3.0.1"
+
+    ignoreFailures = false
+    effort = "max"
+    reportLevel = "medium"
+
+    sourceSets = [sourceSets.main]
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}
+

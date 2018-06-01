@@ -1,0 +1,19 @@
+# 本地开发使用的配置
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/wechat
+    username: root
+    password: root
+    useSSL: true
+    driver-class-name: com.mysql.jdbc.Driver
+    data: classpath:/sql/init-*.sql
+  jpa:
+    show-sql: false
+    generate-ddl: true # 如果要关闭DDL，改为false
+    hibernate:
+      ddl-auto: update # 把update改为none，去掉ddl update，加快启动速度，如果修改了entity，改为update即可
+
+  redis:
+    host: localhost
+    port: 6379

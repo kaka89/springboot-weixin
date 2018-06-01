@@ -1,4 +1,2 @@
-# SpringCloud-WeChat
-This project is build with springboot, and the main purpose of this project is to give a easy way to build services for wechat.
-
-
+# README #
+微信公众号后台基本开发框架
